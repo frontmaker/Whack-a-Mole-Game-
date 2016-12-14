@@ -1,3 +1,5 @@
+import modalWin from './start';
+
 import './style/main.scss';
 
 
@@ -9,10 +11,10 @@ class MoleGame {
         this.holes = document.querySelectorAll('.hole');
         this.scoreBoard = document.querySelector('.score');
         this.moles = document.querySelectorAll('.mole');
+        this.modalFinish = document.querySelector('.js-win');
         this.lastHole = '';
         this.score = 0;
         this.timeUp = false;
-
 
     }
 
@@ -38,7 +40,11 @@ class MoleGame {
     finish(time) {
         setTimeout(() => {
             this.timeUp = true;
-        }, time)
+
+            this.modalFinish.classList.remove('close');
+
+        }, time);
+
     }
 
 
@@ -90,6 +96,7 @@ class MoleGame {
 }
 
 
+
 const game = new MoleGame();
 
-game.start();
+modalWin(game);
