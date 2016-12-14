@@ -81,9 +81,6 @@ class MoleGame {
     }
 
 
-
-
-
     start() {
 
         this.randomHole(this.holes);

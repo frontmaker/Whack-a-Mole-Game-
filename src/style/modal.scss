@@ -1,0 +1,40 @@
+
+.modal-view {
+    width: 700px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    height: 300px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: #ffc600;
+    &__btn {
+        font-size: 4rem;
+        background: #e44c25;
+        border-radius: 3px;
+        color: #FFF;
+        position: relative;
+        box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
+        margin-bottom: 15px;
+        cursor: pointer;
+        width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+        &:active {
+            top: 1px;
+            box-shadow: none;
+        }
+
+        &.btn-level {
+            background-color: #00596d;
+        }
+    }
+}
